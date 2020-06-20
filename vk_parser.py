@@ -26,6 +26,12 @@ class VkParser():
 		with open(model_path, 'rb') as f:
 			self.model = pickle.load(f)
 
+		self.trans_cat = {'Animal foods': 'Животные продукты', 'Aquatic foods': 'Морепродукты', 'Cereals and cereal products': 'Хлопья',
+       'Cocoa and cocoa products': 'Какао и продукты из какао', 'Coffee and coffee products': 'Кофе', 'Fruits':'Фрукты',
+       'Gourds': 'Овощи (Тыквы)', 'Herbs and Spices': 'Травы и специи', 'Nuts': 'Орехи', 'Pulses': 'Бобы', 'Soy': 'Соя', 'Teas': 'Чай',
+       'Vegetables': 'Овощи'
+		}
+
 	def get_photos(self, item):
 
 		imgs = []
@@ -74,7 +80,7 @@ class VkParser():
 			out.append({
 				'id': uid,
 				'text': item['text'],
-				'category': category,
+				'category': self.trans_cat[category],
 				'location': location,
 				'url': url,
 				'imgs': imgs,
