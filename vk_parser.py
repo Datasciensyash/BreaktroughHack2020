@@ -67,7 +67,7 @@ class VkParser():
 
 	def get_posts(self, count:int=10):
 
-		response = self.api.method('wall.get', {'owner_id': self.gid})['items']
+		response = self.api.method('wall.get', {'owner_id': self.gid, 'count': count})['items']
 
 		out = []
 		for item in response:
