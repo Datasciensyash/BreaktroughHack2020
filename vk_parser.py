@@ -58,10 +58,10 @@ class VkParser():
 		return location
 
 	def get_category(self, item):
-		text = self.translator.translate(item['text'])
-		features = self.vectorizer.transform(text)
+		text = self.translator.translate(item['text']).text
+		features = self.vectorizer.transform([text])
 		prediction = self.model.predict(features)
-		class_ = self.encoder.classes_[prediction]
+		class_ = self.encoder.classes_[prediction][0]
 
 		return class_
 
