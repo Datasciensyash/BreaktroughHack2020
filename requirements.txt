@@ -1,0 +1,5 @@
+pickle
+scikit-learn
+googletrans
+vk_api
+numpy
