@@ -6,7 +6,7 @@ import re
 class VkParser():
 	
 	def __init__(self,
-	token:str='b5aabf68b5aabf68b5aabf68c3b5d80c6dbb5aab5aabf68eb47462d91a717d9f99c55a2',
+	token:str='',
 	encoder_path='./models/encoder.pkl',
 	vectorizer_path='./models/vectorizer.pkl',
 	model_path='./models/model.pkl',
