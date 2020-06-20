@@ -2,9 +2,15 @@
 
 ---
 
-### Modules: VkParser 
+## Modules: VkParser 
 
-Module for scraping and parsing vk.
+Module for scraping and parsing vk for telegram bot.
+
+#### City predicting.
+
+Pipeline: Simple keyword search. Default city is Moscow, but if there are keywords (like `#СПб`, `м. Лиговский Проспект`, etc., stored in `spb.txt) related to Saint-Petersburg city we change it to Saint-Petersburg.
+
+#### Predicting of product category.
 
 Pipeline: 
 - Vectorization by Tf-Idf (`./models/vectorizer.pkl`)
@@ -26,6 +32,7 @@ Class list:
 - Teas
 - Vegetables
 
+#### Usage example:
 
 ```python
 from vk_parser import VkParser 
