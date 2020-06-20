@@ -6,7 +6,7 @@ Use-case of vk_parser
 ```python
 from vk_parser import VkParser 
 
-parser = VkParser()
+parser = VkParser(token='your token...')
 
 parser.get_posts(count=10)
 
