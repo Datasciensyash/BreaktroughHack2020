@@ -1,7 +1,31 @@
 # BreaktroughHack2020
 
 ---
-Use-case of vk_parser
+
+### Modules: VkParser 
+
+Module for scraping and parsing vk.
+
+Pipeline: 
+- Vectorization by Tf-Idf (`./models/vectorizer.pkl`)
+- Prediction with LogisticRegression (`./models/model.pkl`)
+- Addiction: Classes stored in LabelEncoder (`./models/encoder.pkl`)
+
+Class list: 
+- Animal foods
+- Aquantic foods
+- Cereals and cereal products
+- Cocoa and cocoa products
+- Coffee and coffee products
+- Fruits
+- Gourds
+- Herbs and Spices
+- Nuts
+- Pulses
+- Soy
+- Teas
+- Vegetables
+
 
 ```python
 from vk_parser import VkParser 
