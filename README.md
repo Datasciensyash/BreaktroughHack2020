@@ -1,7 +1,38 @@
 # BreaktroughHack2020
 
 ---
-Use-case of vk_parser
+
+## Modules: VkParser 
+
+Module for scraping and parsing vk for telegram bot.
+
+#### City predicting.
+
+Pipeline: Simple keyword search. Default city is Moscow, but if there are keywords (like `#СПб`, `м. Лиговский Проспект`, etc., stored in `spb.txt) related to Saint-Petersburg city we change it to Saint-Petersburg.
+
+#### Predicting of product category.
+
+Pipeline: 
+- Vectorization by Tf-Idf (`./models/vectorizer.pkl`)
+- Prediction with LogisticRegression (`./models/model.pkl`)
+- Addiction: Classes stored in LabelEncoder (`./models/encoder.pkl`)
+
+Class list: 
+- Animal foods
+- Aquantic foods
+- Cereals and cereal products
+- Cocoa and cocoa products
+- Coffee and coffee products
+- Fruits
+- Gourds
+- Herbs and Spices
+- Nuts
+- Pulses
+- Soy
+- Teas
+- Vegetables
+
+#### Usage example:
 
 ```python
 from vk_parser import VkParser 
