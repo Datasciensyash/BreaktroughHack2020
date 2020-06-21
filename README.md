@@ -2,7 +2,7 @@
 
 ---
 
-## Modules: VkParser 
+## Modules: VkParser (`vk_parser.py`)
 
 Module for scraping and parsing vk for telegram bot.
 
